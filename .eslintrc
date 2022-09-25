@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "extends": [
+    "plugin:vue/strongly-recommended",
+    "eslint:recommended",
+    "@vue/typescript/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "vue/multi-word-component-names": "off",
+    "no-unused-vars": "off",
+    "no-undef": "off",
+    "no-console": 2,
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "never"],
+    "no-trailing-spaces": "error",
+    "eol-last": ["error", "always"],
+    "quotes": ["error", "single"],
+    "vue/script-indent": ["error", 2, { "baseIndent": 0 }]
+  }
+}
