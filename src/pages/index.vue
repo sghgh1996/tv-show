@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import useFetchShows from '~api/useFetchShows'
 import useShowStore from '~/stores/show'
-
-const { t } = useI18n()
 
 const showStore = useShowStore()
 
 const { isFetching, error } = useFetchShows()
 
-const drama = computed(() => {
-  return showStore.allShows?.filter(s => s.genres.includes('Drama')).slice(0, 20)
+const dramaList = computed(() => {
+  return showStore.allShows?.filter(s => s.genres.includes('Drama')).slice(0, 14)
+})
+
+const actionList = computed(() => {
+  return showStore.allShows?.filter(s => s.genres.includes('Action') && !s.genres.includes('Drama')).slice(0, 14)
+})
+
+const comedyList = computed(() => {
+  return showStore.allShows?.filter(s => s.genres.includes('Comedy') && !s.genres.includes('Drama') && !s.genres.includes('Action')).slice(0, 14)
 })
 </script>
 
@@ -27,10 +32,19 @@ const drama = computed(() => {
 
     <template v-else>
       <ShowList
-        :shows="drama"
+        :shows="dramaList"
         title="Drama"
+      />
+
+      <ShowList
+        :shows="actionList"
+        title="Action"
+      />
+
+      <ShowList
+        :shows="comedyList"
+        title="Comedy"
       />
     </template>
   </div>
 </template>
-

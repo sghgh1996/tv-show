@@ -24,6 +24,6 @@ defineProps<ShowListProps>()
 
 <style scoped>
   .show-list {
-    @apply py-4;
+    @apply py-4 mb-4;
   }
 </style>

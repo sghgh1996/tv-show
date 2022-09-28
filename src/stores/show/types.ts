@@ -1,5 +1,5 @@
 export type Show = {
-  id: string
+  id: number
   name: string
   image: string
   rating: string
@@ -14,7 +14,6 @@ export type Show = {
 
 type State = {
   allShows?: Show[],
-  showId?: number,
   show?: Show
 }
 

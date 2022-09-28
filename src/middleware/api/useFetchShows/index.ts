@@ -4,7 +4,7 @@ import useShowStore from '~/stores/show'
 
 const useFetchShows = () => {
   const apiFetch = useFetch()
-  const store = useShowStore()
+  const showStore = useShowStore()
 
   const { data, isFetching, error } = apiFetch(API_URLS.FETCH_SHOWS).json()
 
@@ -23,7 +23,7 @@ const useFetchShows = () => {
       ended: dataItem.ended
     }))
 
-    store.setAllShows(allShows)
+    showStore.setAllShows(allShows)
   })
 
   return {
