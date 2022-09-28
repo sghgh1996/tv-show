@@ -21,7 +21,6 @@ const useFetchOneShow = (showId: number) => {
       name: show.name,
       image: show.image?.original,
       rating: show.rating?.average,
-      url: show.url,
       averageRuntime: show.averageRuntime,
       genres: show.genres,
       officialSite: show.officialSite,

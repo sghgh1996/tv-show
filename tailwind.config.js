@@ -17,7 +17,8 @@ module.exports = {
       gray: {
         cod: '#121212',
         silver: '#aaaaaa'
-      }
+      },
+      'azure-radiance': '#0088EE'
     },
     backgroundColor: theme => ({
       ...theme('colors')

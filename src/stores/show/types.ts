@@ -3,7 +3,6 @@ export type Show = {
   name: string
   image: string
   rating: string
-  url: string
   averageRuntime: number
   genres: string[]
   officialSite: string

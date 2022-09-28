@@ -14,7 +14,6 @@ const useFetchShows = () => {
       name: dataItem.name,
       image: dataItem.image?.original,
       rating: dataItem.rating?.average,
-      url: dataItem.url,
       averageRuntime: dataItem.averageRuntime,
       genres: dataItem.genres,
       officialSite: dataItem.officialSite,
