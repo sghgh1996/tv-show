@@ -5,7 +5,6 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    IconEdit: typeof import('./components/icons/IconEdit.vue')['default']
     IconLoadingBlue: typeof import('./components/icons/IconLoadingBlue.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { format, isValid } from 'date-fns'
+import { format } from 'date-fns'
 import useShowStore from '~/stores/show'
 import useFetchOneShow from '~api/useFetchOneShow'
 
 const route = useRoute()
 const showStore = useShowStore()
 
-const { isFetching, error } = useFetchOneShow(Number(route.params.showId))
+const { isFetching, error } = useFetchOneShow(Number(route?.params?.showId))
 
 const show = computed(() => {
   return showStore.show
@@ -38,7 +38,7 @@ const premieringDate = computed(() => {
       class="flex justify-center lg:justify-start flex-wrap"
     >
       <img
-        class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none lg:w-[440px] h-auto mb-12"
+        class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none lg:w-[400px] h-auto mb-12"
         :src="show.image"
         :alt="show.name"
         :title="show.name"

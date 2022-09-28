@@ -1,6 +1,6 @@
 import { expect, describe, it, beforeEach } from 'vitest'
 import { VueWrapper, shallowMount } from '@vue/test-utils'
-import DefaultLayout from '../default.vue'
+import DefaultLayout from '~/layouts/default.vue'
 
 describe('default layout', () => {
   let wrapper: VueWrapper

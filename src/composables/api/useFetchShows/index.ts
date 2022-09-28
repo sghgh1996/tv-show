@@ -1,5 +1,5 @@
-import useFetch from '~/middleware/utils/useFetch'
-import { API_URLS } from '~/middleware/utils/useFetch/types'
+import useFetch from '~/composables/useFetch'
+import { API_URLS } from '~/composables/useFetch/types'
 import useShowStore from '~/stores/show'
 
 const useFetchShows = () => {

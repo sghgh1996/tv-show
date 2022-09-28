@@ -20,7 +20,7 @@ export default defineConfig({
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
       '~locales': `${path.resolve(__dirname, 'locales')}/index`,
-      '~api': `${path.resolve(__dirname, 'src')}/middleware/api`
+      '~api': `${path.resolve(__dirname, 'src')}/composables/api`
     }
   },
 

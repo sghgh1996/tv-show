@@ -1,7 +1,7 @@
-import { expect, describe, it, beforeEach, vi } from 'vitest'
+import { expect, describe, it, beforeEach } from 'vitest'
 import { VueWrapper, shallowMount } from '@vue/test-utils'
-import Home from '~/pages/index.vue'
 import { createPinia, setActivePinia } from 'pinia'
+import Home from '~/pages/index.vue'
 
 describe('home page', () => {
   let wrapper: VueWrapper

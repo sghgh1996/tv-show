@@ -1,6 +1,6 @@
 import { expect, describe, it, beforeEach } from 'vitest'
 import { VueWrapper, shallowMount } from '@vue/test-utils'
-import NotFound from '../404.vue'
+import NotFound from '~/layouts/404.vue'
 import { createI18n } from 'vue-i18n'
 import { messages } from '~/modules/i18n/index'
 

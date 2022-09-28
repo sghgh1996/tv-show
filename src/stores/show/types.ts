@@ -2,7 +2,7 @@ export type Show = {
   id: number
   name: string
   image: string
-  rating: string
+  rating: number
   averageRuntime: number
   genres: string[]
   officialSite: string

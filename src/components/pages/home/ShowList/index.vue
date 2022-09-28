@@ -7,7 +7,10 @@ defineProps<ShowListProps>()
 <template>
   <div class="show-list">
     <div class="mb-4 inline-block	leading-8 text-white">
-      <h1 class="text-lg font-bold">
+      <h1
+        class="text-lg font-bold"
+        data-test="content-title"
+      >
         {{ title }}
       </h1>
     </div>

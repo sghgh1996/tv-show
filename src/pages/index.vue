@@ -7,15 +7,15 @@ const showStore = useShowStore()
 const { isFetching, error } = useFetchShows()
 
 const dramaList = computed(() => {
-  return showStore.allShows?.filter(s => s.genres.includes('Drama')).slice(0, 14)
+  return showStore.allShows?.filter(s => s.genres.includes('Drama')).slice(0, 10)
 })
 
 const actionList = computed(() => {
-  return showStore.allShows?.filter(s => s.genres.includes('Action') && !s.genres.includes('Drama')).slice(0, 14)
+  return showStore.allShows?.filter(s => s.genres.includes('Action') && !s.genres.includes('Drama')).slice(0, 10)
 })
 
 const comedyList = computed(() => {
-  return showStore.allShows?.filter(s => s.genres.includes('Comedy') && !s.genres.includes('Drama') && !s.genres.includes('Action')).slice(0, 14)
+  return showStore.allShows?.filter(s => s.genres.includes('Comedy') && !s.genres.includes('Drama') && !s.genres.includes('Action')).slice(0, 10)
 })
 </script>
 

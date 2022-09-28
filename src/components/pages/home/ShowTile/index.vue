@@ -20,6 +20,7 @@ const openShowDetailPage = () => {
     @click="openShowDetailPage"
   >
     <img
+      v-if="show.image"
       class="w-full h-36 md:h-56 xl:h-64 mb-2 object-cover"
       :src="show.image"
       :alt="show.name"
@@ -27,10 +28,16 @@ const openShowDetailPage = () => {
     >
 
     <div>
-      <div class="text-sm text-white mb-1">
+      <div
+        class="text-sm text-white mb-1"
+        data-test="content-name"
+      >
         {{ show.name }}
       </div>
-      <div class="text-xs text-gray-silver">
+      <div
+        class="text-xs text-gray-silver"
+        data-test="content-rating"
+      >
         {{ show.rating }} of 10
       </div>
     </div>

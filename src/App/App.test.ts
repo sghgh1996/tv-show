@@ -1,6 +1,6 @@
 import { expect, it, describe, beforeEach } from 'vitest'
 import { shallowMount, VueWrapper } from '@vue/test-utils'
-import App from './index.vue'
+import App from '~/App/index.vue'
 import { createHead } from '@vueuse/head'
 
 describe('App.vue', () => {
