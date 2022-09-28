@@ -19,7 +19,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
-      '~vars': `${path.resolve(__dirname, 'src')}/styles/vars.scss`,
       '~locales': `${path.resolve(__dirname, 'locales')}/index`,
       '~api': `${path.resolve(__dirname, 'src')}/middleware/api`
     }
