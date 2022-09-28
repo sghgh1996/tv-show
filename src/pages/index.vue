@@ -10,13 +10,12 @@ const showStore = useShowStore()
 const { isFetching, error } = useFetchShows()
 
 const drama = computed(() => {
-  // return showStore.allShows
-  return showStore.allShows?.filter(s => s.genres.includes('Drama'))
+  return showStore.allShows?.filter(s => s.genres.includes('Drama')).slice(0, 20)
 })
 </script>
 
 <template>
-  <div class="t-page-content text-white">
+  <div class="d-container t-page-content text-white">
     <IconLoadingBlue
       v-if="isFetching"
       component-class="w-6 h-6 inline-block animate-spin"
@@ -27,8 +26,10 @@ const drama = computed(() => {
     </div>
 
     <template v-else>
-      <ShowList />
-      here=> {{ drama[11] }}
+      <ShowList
+        :shows="drama"
+        title="Drama"
+      />
     </template>
   </div>
 </template>

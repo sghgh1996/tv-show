@@ -10,6 +10,7 @@ const useFetchShows = () => {
 
   watch(data, (shows) => {
     const allShows = shows.map(dataItem => ({
+      id: dataItem.id,
       name: dataItem.name,
       image: dataItem.image?.original,
       rating: dataItem.rating?.average,
