@@ -9,6 +9,7 @@ const isLoading = ref(false)
 
 watch(searchText, async (newSearchText) => {
   if (newSearchText.length < 3) {
+    showStore.setSearchedShows([])
     return
   }
 
