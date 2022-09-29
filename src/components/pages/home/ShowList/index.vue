@@ -15,7 +15,7 @@ defineProps<ShowListProps>()
       </h1>
     </div>
 
-    <div class="flex flex-wrap just">
+    <div class="flex flex-wrap">
       <ShowTile
         v-for="show in shows"
         :key="show.id"

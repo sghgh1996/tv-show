@@ -20,29 +20,13 @@
     @apply px-6 py-20;
   }
 
-  .d-hr-line {
-    @apply border-t-2 border-gray-nurse w-full;
-  }
-
   .d-container {
     @apply sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg
       xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto;
   }
 
-  .d-row {
-    @apply grid grid-cols-12;
-  }
-
-  .d-col {
-    @apply flex justify-center items-center;
-  }
-
-  .d-container-fluid {
-    @apply w-full max-w-full 2xl:max-w-screen-2xl mx-auto;
-  }
-
-  .d-container-2 {
-    @apply sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg
-      xl:max-w-screen-xl 2xl:max-w-screen-xl mx-auto px-5;
+  .d-input {
+    @apply p-2.5 text-sm text-black placeholder-gray-cod
+      bg-white border-0 outline-none focus:outline-none w-full transition-all;
   }
 }

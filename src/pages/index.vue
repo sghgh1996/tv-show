@@ -21,16 +21,20 @@ const comedyList = computed(() => {
 
 <template>
   <div class="d-container t-page-content text-white">
-    <IconLoadingBlue
+    <div
       v-if="isFetching"
-      component-class="w-6 h-6 inline-block animate-spin"
-    />
+      class="my-12"
+    >
+      <IconLoadingBlue component-class="w-12 h-12 inline-block animate-spin" />
+    </div>
 
     <div v-else-if="error">
       error happened: {{ error }}
     </div>
 
     <template v-else>
+      <ShowSearch />
+
       <ShowList
         :shows="dramaList"
         title="Drama"

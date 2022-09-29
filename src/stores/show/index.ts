@@ -5,13 +5,15 @@ import State, { Show } from './types'
 interface Actions {
   setAllShows: (data: Show[]) => void
   setShow: (data: Show) => void
+  setSearchedShows: (data: Show[]) => void
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const useShowStore = defineStore<StoreKeys, State, any, Actions>(StoreKeys.SHOW, {
   state: () => ({
     allShows: [],
-    show: undefined
+    show: undefined,
+    searchedShows: []
   }),
 
   actions: {
@@ -20,6 +22,9 @@ const useShowStore = defineStore<StoreKeys, State, any, Actions>(StoreKeys.SHOW,
     },
     setShow(data: Show) {
       this.show = data
+    },
+    setSearchedShows(data: Show[]) {
+      this.searchedShows = data
     }
   }
 })

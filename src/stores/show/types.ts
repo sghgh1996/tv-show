@@ -13,7 +13,8 @@ export type Show = {
 
 type State = {
   allShows?: Show[],
-  show?: Show
+  show?: Show,
+  searchedShows: Show[]
 }
 
 export default State
